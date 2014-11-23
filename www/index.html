@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>OmniCommerce</title>
+    </head>
+    <body>
+        <div class="app">
+            <div id="MainTitle" onclick="location.reload();">
+                OmniCommerce App 
+            </div>
+
+            <div id="pantallaBienvenida">
+                
+                <div class="InfoPage">
+                    Menú principal
+                </div>
+
+                <div class="contentPage">
+  
+                    <div class="itemMenu" onclick="mostrarOpcionesCamara()">Fotografía</div>
+                    <div class="itemMenu" id="scan">Código QR</div>
+
+                </div>
+
+            </div>
+
+            <div id="opcionesCamara">
+                
+                <div class="InfoPage">
+                    Opciones de fotografía
+                </div>
+
+                <div class="contentPage">
+                    <button onclick="app.takePicture();">Tomar fotografía</button>
+                    <button onclick="app.fromGallery();">Desde galería</button>
+                    
+                    <img id="MyImg" src="img/logo.png" /><br />
+                    <button id="btnBuscarXFoto" onclick="BuscarXFoto()">Buscar producto</button>
+
+                </div>
+
+            </div>
+
+            <div id="resultadoBusqueda">
+                
+                <div class="InfoPage">
+                    Resultados de búsqueda
+                </div>
+
+                <div class="contentPage" id="resultadosPanel">
+
+<!--
+                    <div class="searchResult">
+                        <div class="imgResult">
+                            <img src="img/logo.png" class="imResult2"/>
+                        </div>
+                        <div class="infoResult">
+                            <b>Nombre</b> <br />
+                            Precio:<br />
+                            <button> Ver en 10 Tiendas </button>
+                        </div>
+                    </div>
+                -->
+
+                </div>
+
+            </div>
+
+
+            
+        
+            <div id="Footer" >
+                &copy; 2014 Powered by Néstor Vélez & José Amud
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <!--<script type="text/javascript" src="js/barcodescanner.js"></script> -->
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+
+    </body>
+</html>

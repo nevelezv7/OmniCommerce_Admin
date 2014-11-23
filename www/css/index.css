@@ -1,0 +1,218 @@
+#MainTitle{
+    width: 100%;
+    background: #5e87b0;
+    border-bottom: 1px solid #456f9a;
+    text-shadow: 0 1px 1px #3e6790;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+
+#Footer{
+    position: absolute;/* fijo en la pantalla */
+    bottom: 0;
+    width: 100%;
+    color: #666;
+    font-size: 2em;
+    text-align: center;
+}
+
+#MyImg{
+    visibility: hidden;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#btnBuscarXFoto{
+    /*visibility: hidden;*/
+    margin-top: 0.7%;
+    display: block;
+    margin: 0 auto;
+}
+
+#pantallaBienvenida{
+    width: 100%;
+    text-align: center;
+}
+
+.InfoPage{
+    width: 100%;
+    padding-top: 4%;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+}
+.contentPage{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#pantallaBienvenida{
+    margin-top: 10%;
+}
+
+#opcionesCamara{
+    margin-top: 10%;
+    display: none;
+}
+
+#resultadoBusqueda{
+    margin-top: 10%;
+    display: none;
+    
+    
+}
+.searchResult{
+    width: 80%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 1% auto;
+}
+.imResult2{
+    width: 100px;
+    margin: 1%;
+}
+.imgResult{
+    width:30%;
+    display: inline-block;
+    padding-top: 1%;
+    padding-right: 2%;
+}
+.infoResult{
+    text-align:  left;
+    width: 65%;
+    vertical-align: top;
+    font-size: 2em;
+    display: inline-block;
+    padding-top: 1.5%;
+}
+
+
+.itemMenu{
+    margin: 0 auto;
+    display: block;
+    margin-top: 2%;
+    padding: 2% 3%;
+    border-radius: 5px;
+    background-color: #5e87b0;
+    color: white;
+    width: 75%;
+    font-size: 2em;
+}
+
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    
+    /*background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    */
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    /*
+    background:url(../img/logo.png) no-repeat center top;
+    position:absolute;             
+    left:50%;
+    top:50%;
+    height:50px;                   
+    width:225px;                   
+    text-align:center;
+    padding:180px 0px 0px 0px;     
+    margin:-115px 0px 0px -112px;  
+    */
+}
+
+/*
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        
+        background-position:left center;
+        padding:75px 0px 75px 170px;  
+        margin:-90px 0px 0px -198px;  
+              
+    }
+}
+*/ 
+
+.app button {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+ /*
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}*/
