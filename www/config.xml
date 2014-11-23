@@ -3,17 +3,16 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.ryanw.barcodedemo"
         version   = "2.0.0">
-    <name>OmniCommerce</name>
+    <name>OmniCommerce Admin</name>
 
     <description>
-        You want it, you find it
+        Scan Codebar
     </description>
 
     <author href="http://phonegap.com" email="nevelezv@gmail.com">
         Nestor Velez
     </author>
 
-    <gap:plugin name="org.apache.cordova.core.camera" />
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
     <feature name="http://api.phonegap.com/1.0/device" />
