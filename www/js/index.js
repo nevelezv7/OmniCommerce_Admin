@@ -193,7 +193,7 @@ function buscarTiendas(idProducto){
 function login(){
     var send = {
         "username": $('#username').val(),
-        "pass":$('#password').val(),
+        "pass": $('#password').val(),
     };
     $.ajax({
             data:  send,
