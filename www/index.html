@@ -9,6 +9,7 @@
         <title>OmniCommerce</title>
     </head>
     <body>
+        <input type="hidden" id="idBodega" />
         <div class="app">
             <div id="MainTitle" onclick="location.reload();">
                 OmniCommerce App - Admin
@@ -17,13 +18,14 @@
             <div id="pantallaBienvenida">
                 
                 <div class="InfoPage">
-                    Menú principal
+                    Log in
                 </div>
 
                 <div class="contentPage">
-  
-                    <div class="itemMenu" onclick="mostrarOpcionesCamara()">Fotografía</div>
-                    <div class="itemMenu" id="scan">Código QR</div>
+                    <span id="errorLogin">Error. Verifique Cédula o contraseña no váilda</span>
+                    <input type="text" class="inLogin" id="username" placeholder="Cédula"><br>
+                    <input type="password" class="inLogin" id="password" placeholder="Password" >
+                    <div class="itemMenu" onclick="login()">Log in</div>
 
                 </div>
 
@@ -32,15 +34,16 @@
             <div id="opcionesCamara">
                 
                 <div class="InfoPage">
-                    Opciones de fotografía
+                    Opciones de administrador
                 </div>
 
                 <div class="contentPage">
-                    <button onclick="app.takePicture();">Tomar fotografía</button>
-                    <button onclick="app.fromGallery();">Desde galería</button>
-                    
-                    <img id="MyImg" src="img/logo.png" /><br />
-                    <button id="btnBuscarXFoto" onclick="BuscarXFoto()">Buscar producto</button>
+                    <button id="scan">Ingresar producto a bodega</button>
+                    <br>
+                    <br>
+                    <span id="errorIngreso">Error al ingresar el producto.</span>
+                    <br>
+                    <span id="bnIngreso">El producto ha sido ingresado correctamente.</span>
 
                 </div>
 

@@ -80,34 +80,25 @@ var app = {
             console.log("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
             "Format: " + result.format + "\n" + 
-            "Cancelled: " + result.cancelled);  
+            "Cancelled: " + result.cancelled);
 
-            var send = {"Result": result.text, "Format": result.format, "Cancelled": result.cancelled}
+            var cantidad = prompt("Ingrese la cantidad", "");  
+
+            var send = {"Result": result.text, "Format": result.format, "Cancelled": result.cancelled, "Cantidad" : cantidad};
 
             $.ajax({
                 dataType: 'jsonp',
                 data: send,
-                url:   'http://www.mocky.io/v2/5471ff80db32049807feda0c',
+                url:   'http://www.mocky.io/v2/54720a2adb32044708feda0f',
                 type:  'post',
                 success:  function (result) {
-                    var panel = document.getElementById('pantallaBienvenida');
-                    panel.style.display= "none";
-                    var panelResults = document.getElementById('resultadoBusqueda');
-                    panelResults.style.display= "block";
-                    $( result.products ).each(function() {
-                        var newDiv = '<div class="searchResult">';
-                        newDiv += '   <div class="imgResult">';
-                        newDiv += '      <img src="'+$( this )[0].img+'" alt="img/logo.png" class="imResult2"/>';
-                        newDiv += '    </div>';
-                        newDiv += '    <div class="infoResult">';
-                        newDiv += '        <b>'+$( this )[0].name+'</b> <br />';
-                        newDiv +=         $( this )[0].precio+'<br />';
-                        newDiv += '        <button onclick="buscarTiendas('+$( this )[0].id+')"> Ver en '+$( this )[0].tiendas+' Tiendas </button>';
-                        newDiv += '    </div>';
-                        newDiv += '</div>';
-                        $('#resultadosPanel').append(newDiv);
-                        
-                    });
+                    $("#errorIngreso").hide();
+                    $("#bnIngreso").hide();
+                    if(result.ingreso == "true"){
+                        $("#bnIngreso").show();
+                    }else{
+                        $("#errorIngreso").show();
+                    }
                 }, 
             });
 
@@ -186,6 +177,38 @@ function buscarTiendas(idProducto){
                     newDiv += '</div>';
                     $('#resultadosPanel').append(newDiv);
                 });
+            }, 
+    });
+}
+
+function login(){
+    var send = {
+        "username": $('#username').val(),
+        "pass":$('#password').val(),
+    };
+    $.ajax({
+            data:  send,
+            dataType: 'jsonp',
+            url:   'http://www.mocky.io/v2/54720741db32041408feda0e',
+            type:  'post',
+            success:  function (result) {
+                
+                if(result.login == "true"){
+                    $('#idBodega').val(result.idBodega);
+
+                    var panel = document.getElementById('pantallaBienvenida');
+                    panel.style.display= "none";
+
+                    var panel2 = document.getElementById('opcionesCamara');
+                    panel2.style.display= "block";
+                }
+                else{
+                    $('#password').val('');
+                    $('#errorLogin').show();
+                }
+
+
+
             }, 
     });
 }

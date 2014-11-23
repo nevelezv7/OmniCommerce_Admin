@@ -1,3 +1,29 @@
+#errorLogin{
+color: red;
+font-size: 1.7em;
+display: none;
+}
+
+#errorIngreso{
+  color: red;
+font-size: 1.7em;
+display: none;  
+}
+
+#bnIngreso{
+  color: green;
+font-size: 1.7em;
+display: none;  
+}
+
+.inLogin{
+    display: block;
+    border-radius: 5px;
+    padding: 2% 2%;
+    margin: 0 auto;
+    font-size: 2.7em;
+}
+
 #MainTitle{
     width: 100%;
     background: #5e87b0;
