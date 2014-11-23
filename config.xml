@@ -6,13 +6,14 @@
     <name>OmniCommerce Admin</name>
 
     <description>
-        Scans barcodes and QRs to inventary
+        Scan Codebar and QR code to inventary
     </description>
 
     <author href="http://phonegap.com" email="nevelezv@gmail.com">
-       Nestor Velez & Jose Amud
+        Nestor Velez
     </author>
 
+    
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
     <feature name="http://api.phonegap.com/1.0/device" />
