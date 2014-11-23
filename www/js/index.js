@@ -90,7 +90,7 @@ var app = {
             if (isNaN(valor)) { 
                 $("#errorIngreso").show();
                 $("#bnIngreso").hide();
-                return;
+                return false;
             }
 
             var send = {"Result": result.text, "Format": result.format, "Cancelled": result.cancelled, "Cantidad" : cantidad};
