@@ -84,6 +84,15 @@ var app = {
 
             var cantidad = prompt("Ingrese la cantidad", "");  
 
+            var valor = parseInt(cantidad) 
+
+            //Compruebo si es un valor numérico 
+            if (isNaN(valor)) { 
+                $("#errorIngreso").show();
+                $("#bnIngreso").hide();
+                return;
+            }
+
             var send = {"Result": result.text, "Format": result.format, "Cancelled": result.cancelled, "Cantidad" : cantidad};
 
             $.ajax({
